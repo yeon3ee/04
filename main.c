@@ -5,12 +5,27 @@
 
 int main(int argc, char *argv[]) {
 	int a;
-	printf("input the second : ");
+	printf("input the year: ");
 	scanf("%i",&a);
 	
-	printf("%i seconds -%i:%i\n",a, a/60, a%60);
+	if ( (a%4==0 && a%100!=0)||(a%400==0))
+	{
 	
-	system("PAUSE");
+		printf("%i is leap year.\n",a);
+	}
+	else
+	{
+	
+	printf("%i is not leap year. \n",a);
+	}	
+	
+	 
+	
+	//1. 4로 나누어 떨어져야함
+	//2. 100으로 나누어 떨어지지 않아야함.
+	//3, 위를 만족안해도 400으로 나누어 떨어짐.
+	 
+	
 
     return 0;
 }
